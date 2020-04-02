@@ -151,6 +151,10 @@ def about():
 def county():
     return render_template('counties.html')
 
+@app.route("/States")
+def states():
+    return render_template('states.html')
+
 
 #SETUP MODELS PAGE TO INCLUDE REGRESSION MODEL
 #This can be another route with index.html above ("/" and render_template("index.html") and 
