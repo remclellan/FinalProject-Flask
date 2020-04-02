@@ -151,14 +151,11 @@ def about():
 def county():
     return render_template('counties.html')
 
-app.route("/States")
-def state():
-    return render_template("tableau.html")
 
 #SETUP MODELS PAGE TO INCLUDE REGRESSION MODEL
 #This can be another route with index.html above ("/" and render_template("index.html") and 
 #this route being "/other_route_name" and render_template("otherpage.html")
-@app.route("/Models", methods=["GET", "POST"])
+@app.route("/models", methods=["GET", "POST"])
 def models():
     if request.method == "POST":
         load_model()
