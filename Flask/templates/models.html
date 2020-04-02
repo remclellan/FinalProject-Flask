@@ -63,52 +63,22 @@
             <hr>
         <div class="row">
           <div class="col-12">
-              <h2>KNN</h2>
-              <p>Qualitative Data</p>
             <hr>
-          </div>
-        </div>
-        
-            <!-- section for image cards to data sources -->
-        <div class="row">
-            <div class="col-6">
-            <div id="section5">
-              <div class="card">
-                <img class="card-img-top" src="https://www.americashealthrankings.org/assets/images/AHR_30years_horizontal.png" alt="Card image cap">
-                <div class="card-body">
-                  <hr>
-                  <p class="card-text">Data source for health metrics over time used in our project.</p>
-                </div>
-                <hr>
-                <div class="card-body">
-                  <a href="https://www.americashealthrankings.org/about/methodology/introduction" class="card-link">Learn more about the metrics here!</a>
-                </div>
-              </div>
-            </div>  
-            <div class="col-6">
             <div class="card">
-              <br>
-              <img class="card-img-top" src="https://medicaid.gov/resources/images/logos/logo-MedicaidGov.svg" alt="Card image cap">
-              <br>
-              <div class="card-body">
-                <hr>
-                <p class="card-text">Data source for medicaid enrollment and state expansion data used in our project.</p>
-              </div>
-              <hr>
-              <div class="card-body">
-                <a href="https://www.medicaid.gov/medicaid/national-medicaid-chip-program-information/medicaid-chip-enrollment-data/monthly-medicaid-chip-application-eligibility-determination-and-enrollment-reports-data/index.html" class="card-link">Monthly enrollment datasets available here!</a>
-              </div>
-            </div>
-
-            </div>
-
-        </div>
-       <hr>
-
-          
+            <h2>KNN</h2>
+            <p>Our KNN model took the 10 factors identified from our Random Forest Regression analysis and applied them to the
+              delivery setting and location types based on Counties with Community Health Centers today to see if we could accurately
+              identify the best Community Health Center setting and type.   We found that when we initially applied a demographic heavy 
+              model, that identification was not there, but when we moved to utilize the 10 most impactful health factors, our scores
+              increased to 78-85% depending on which target we were trying to identify.
+            </p>
           </div>
         </div>
-       <hr>
+          </div>
+        </div>
+        <hr>
+        <br>
+       <br>
 </div>
        {{ macros.footer() }}
 {% endblock %}
