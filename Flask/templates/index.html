@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+{% block body %}
+
+
+{{ macros.navbar() }}
+
+  <!-- JumboTron -->
+  
+  <div class="container">
+    <div class="jumbotron shadow-lg p-3 mb-5 bg-light">
+      <div class="row">
+      <div class="col-sm-12">
+        <h1 class="display-3">Healthcare in The U.S.</h1>
+        <p class="lead text-capitalize">How the Expansion of Medicaid after ACA Impacted the States</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Start of website -->
+
+  <div class="card-deck">
+    <div class="card bg-primary">
+      <div class="card-body text-center">
+        <p class="card-text">Some text inside the first card</p>
+      </div>
+    </div>
+    <div class="card bg-warning">
+      <div class="card-body text-center">
+        <p class="card-text">Some text inside the second card</p>
+      </div>
+    </div>
+    <div class="card bg-success">
+      <div class="card-body text-center">
+        <p class="card-text">Some text inside the third card</p>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+            <div class="card-body p-5">
+          <div id="section1 ">
+          <h3>State Health Ranking by Year</h3>
+          <h5>Select Year</h5> 
+          <select id="selChoroYear">
+            <option>2019</option>
+            <option>2018</option>
+            <option>2017</option>
+            <option>2016</option>
+            <option>2015</option>
+            <option>2014</option>
+          </select>
+          <div id="map"></div>
+        </div>
+ 
+        <hr>
+          <div id="section2">
+                    <h2>Let's Compare Outcomes</h2>
+
+ <!-- DropDown Menu Code for Menu 1 and Menu 2 in a single row!-->
+          <div class="row">
+
+            <div class="col-md-6">
+              <div class="well">
+                <h4>Choose Year, Then Pick State</h4><br>
+                <h4>Comparison Year 1</h4>
+                <select id="selDatayear1"></select>
+                <h4>Comparison State 1</h4>
+                <select id="selDataset1"></select><br>
+      
+              </div>
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title">State Health Data</h3>
+                </div>
+                <div id="sample-metadata1" class="panel-body"></div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="well">
+                  <h4>Choose Year, Then Pick State</h4><br>
+                  <h4>Comparison Year 2</h4>
+                  <select id="selDatayear2"></select>
+                  <h4>Comparison State 2</h4>
+                  <select id="selDataset2"></select><br>
+      
+                </div>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">State Health Data </h3>
+                  </div>
+                  <div id="sample-metadata2" class="panel-body"></div>
+                </div>
+              </div>
+            </div>
+          
+  <!-- End of DropDown Menu Code for Menu 1 and 2-->
+      <div class="row">
+        <div class="col-md-5">
+          <div id="bar"></div>
+        </div>
+        <div class="col-md-5">
+          <div id="gauge"></div>
+        </div>
+        <div class="col-md-12">
+          <div id="bubble"></div>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <table>
+          <!-- Table Goes Here-->
+        </table>
+      </div>
+    </div>
+          <hr>
+          <div class="card border-0 shadow my-5">
+            <div class="card-body p-5">
+          <div id="section3">
+              <h2>Change over Year by State</h2><br>
+              <h4>Select State and Metric</h4><select id="selStateData"></select>
+              <select id="selectButton"></select><br><br>
+                    <div class="row">
+                        <div id="myChart" width="550" height="400"></div>
+                    </div>
+                            </div>
+                              </div>
+                        </div>
+                      </div>
+                   </div>     
+                </div>
+              </div>
+          </div>
+        </div>
+       </div>
+   
+
+{% endblock %}
