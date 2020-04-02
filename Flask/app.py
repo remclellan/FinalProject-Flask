@@ -146,13 +146,13 @@ def process_location(data):
 def about():
     return render_template("about.html")
 
-@app.route("/Explore")
-def explore():
-    return render_template("explore.html")
 
+@app.route("/Counties")
+def county():
+    return render_template('counties.html')
 
-@app.route("/tableau")
-def tableau():
+app.route("/States")
+def state():
     return render_template("tableau.html")
 
 #SETUP MODELS PAGE TO INCLUDE REGRESSION MODEL
